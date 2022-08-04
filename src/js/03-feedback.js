@@ -1,4 +1,3 @@
-
 import throttle from 'lodash.throttle';
 
 const feedbackForm = document.querySelector('.feedback-form');
@@ -29,7 +28,10 @@ feedbackForm.addEventListener('submit', submitData);
 
 function submitData(e) {
   e.preventDefault();
-  this.reset();
-  console.log(localStorage.getItem('feedback-form-state'));
-  localStorage.removeItem('feedback-form-state');
+  if (email.value && message.value) {
+    this.reset();
+    console.log(localStorage.getItem('feedback-form-state'));
+    localStorage.removeItem('feedback-form-state');
+  }
+  else alert (`введите данные`)
 }
