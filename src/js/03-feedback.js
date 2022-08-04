@@ -33,5 +33,5 @@ function submitData(e) {
     console.log(localStorage.getItem('feedback-form-state'));
     localStorage.removeItem('feedback-form-state');
   }
-  else alert (`введите данные`)
+  else alert (`Введите данные`)
 }
